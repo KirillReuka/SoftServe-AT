@@ -8,18 +8,26 @@ public class Chief {
         salad.add(vegetable);
     }
 
-//    public ArrayList<Vegetable> getSalad() {
-//        return salad;
-//    }
-
     public void showSalad() {
-        System.out.print("Salad consists of: ");
-        for (Object s : salad) {
-            System.out.println(s.toString());
+        if (salad.size() == 0) {
+            System.out.println("Salad is empty");
+        } else {
+            System.out.println("Salad consists of: ");
+            for (Object s : salad) {
+                System.out.println(s.toString());
+            }
         }
     }
 
     public double getCalories() {
         return CaloriesCalculating.sumOfCalories(salad);
+    }
+
+    public void deleteVegetable(String vegetable) {
+        salad.clear();
+    }
+
+    public void deleteAllVegetables() {
+        salad.clear();
     }
 }

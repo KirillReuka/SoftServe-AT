@@ -31,6 +31,10 @@ public class Chief {
         salad.removeIf(v -> v.getColor().equals(color));
     }
 
+    public void deleteByWeight(int from, int to) {
+        salad.removeIf(v -> v.getWeight() >= from && v.getWeight() <= to);
+    }
+
     public void deleteAllVegetables() {
         salad.clear();
     }

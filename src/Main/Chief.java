@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Chief {
     ArrayList<Vegetable> salad = new ArrayList<>();
@@ -37,5 +38,25 @@ public class Chief {
 
     public void deleteAllVegetables() {
         salad.clear();
+    }
+
+    public void sortingByWeight() {
+        salad.sort(Comparator.comparing(Vegetable::getWeight).reversed());
+    }
+
+    public void sortingByCalories() {
+        salad.sort(Comparator.comparing(Vegetable::getCalories).reversed());
+    }
+
+    public ArrayList<Vegetable> getSalad() {
+        return salad;
+    }
+
+    public void compareTwoVegetables(Vegetable v1, Vegetable v2) {
+        if (v1.equals(v2)) {
+            System.out.println("Vegetables are equal");
+        } else {
+            System.out.println("Vegetables are not equal");
+        }
     }
 }

@@ -19,8 +19,8 @@ public class Demo {
         chief.showSalad();
         System.out.println();
         chief.add("Tomato", "Red", 1, 24);
-        chief.add("Cucumber", "Green", 1, 15);
-        chief.add("Onion", "White", 500, 47);
+        chief.add("Cucumber", "Green", 10, 15);
+        chief.add("Onion", "White", 1, 47);
 
         chief.deleteByColor("Red");
         chief.showSalad();
@@ -28,20 +28,15 @@ public class Demo {
 
         chief.deleteByWeight(400, 1000);
         chief.showSalad();
+
+        chief.sortingByWeight();
+        chief.showSalad();
+        System.out.println();
+
+        chief.sortingByCalories();
+        chief.showSalad();
+
+        chief.compareTwoVegetables(chief.getSalad().get(0), chief.getSalad().get(1));
+
     }
 }
-
-//DONE
-//добавлять овощи в салат
-//отображать в консоль список овощей из которых состоит салат
-//подсчитывать калории салата
-//убирать овощи из салата
-//Если салат пустой - выводить что он пустой
-//искать овощи по цвету
-
-//TO DO
-//сортировать овощи в салате по калориям и по весу
-//искать овощи по весовому диапазону
-//иметь возможность сравнить два овоща (равны ли они между собой).
-//hashCode()
-// Equals()

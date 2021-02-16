@@ -16,11 +16,6 @@ public class Vegetable {
         return getName() + ", " + getWeight() + " g, " + getCalories() + " calories.";
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        return true;
-    }
-
     String getName() {
         return name;
     }

@@ -1,8 +1,8 @@
 public class Vegetable {
-    private String name;
-    private String color;
-    private int weight;
-    private int calories;
+    private final String name;
+    private final String color;
+    private final int weight;
+    private final int calories;
 
     public Vegetable(String name, String color, int weight, int calories) {
         this.name = name;

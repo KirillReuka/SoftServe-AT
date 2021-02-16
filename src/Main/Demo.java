@@ -7,9 +7,24 @@ public class Demo {
         chief.add("Onion", "White", 100, 47);
 
         chief.showSalad();
-        chief.getCalories();
+        System.out.println("Salad consists of " + chief.getCalories() + " calories.");
+        System.out.println();
+
+        chief.showSalad();
+        chief.deleteByName("Tomato");
+        chief.showSalad();
+        System.out.println();
+
         chief.deleteAllVegetables();
         chief.showSalad();
+        System.out.println();
+        chief.add("Tomato", "Red", 100, 24);
+        chief.add("Cucumber", "Green", 100, 15);
+        chief.add("Onion", "White", 100, 47);
+
+        chief.deleteByColor("Red");
+        chief.showSalad();
+        System.out.println("Salad consists of " + chief.getCalories() + " calories.");
     }
 }
 
@@ -21,5 +36,8 @@ public class Demo {
 //Если салат пустой - выводить что он пустой
 
 //TO DO
-//        Шеф повар должен иметь возможность , , сортировать овощи в салате по калориям и по весу, искать овощи по признакам (по цвету, по весовому диапазону), иметь возможность сравнить два овоща (равны ли они между собой).
-//        Т.к. в ходе работы программы овощи будут сравниваться между собой, в классе Овощи необходимо переопределить методы hashCode(), Equals() и toString()
+//сортировать овощи в салате по калориям и по весу
+//искать овощи по признакам (по цвету, по весовому диапазону)
+//иметь возможность сравнить два овоща (равны ли они между собой).
+//hashCode()
+// Equals()

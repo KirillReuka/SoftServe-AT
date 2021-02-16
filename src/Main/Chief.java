@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Chief {
     ArrayList<Vegetable> salad = new ArrayList<>();
 
-    public void add(String name, String color, double weight, double calories) {
+    public void add(String name, String color, int weight, int calories) {
         Vegetable vegetable = new Vegetable(name, color, weight, calories);
         salad.add(vegetable);
     }
@@ -19,12 +19,16 @@ public class Chief {
         }
     }
 
-    public double getCalories() {
+    public int getCalories() {
         return CaloriesCalculating.sumOfCalories(salad);
     }
 
-    public void deleteVegetable(String vegetable) {
-        salad.clear();
+    public void deleteByName(String vegetable) {
+        salad.removeIf(v -> v.getName().equals(vegetable));
+    }
+
+    public void deleteByColor(String color) {
+        salad.removeIf(v -> v.getColor().equals(color));
     }
 
     public void deleteAllVegetables() {

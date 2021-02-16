@@ -1,10 +1,10 @@
 public class Vegetable {
     private String name;
     private String color;
-    private double weight;
-    private double calories;
+    private int weight;
+    private int calories;
 
-    public Vegetable(String name, String color, double weight, double calories) {
+    public Vegetable(String name, String color, int weight, int calories) {
         this.name = name;
         this.weight = weight;
         this.calories = calories;
@@ -13,7 +13,12 @@ public class Vegetable {
 
     @Override
     public String toString() {
-        return getName();
+        return getName() + ", " + getWeight() + " g, " + getCalories() + " calories.";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return true;
     }
 
     String getName() {
@@ -24,11 +29,11 @@ public class Vegetable {
         return color;
     }
 
-    double getWeight() {
+    int getWeight() {
         return weight;
     }
 
-    double getCalories() {
+    int getCalories() {
         return calories;
     }
 }

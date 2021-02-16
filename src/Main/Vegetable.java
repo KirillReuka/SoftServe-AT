@@ -1,5 +1,3 @@
-package Main;
-
 public class Vegetable {
     private String name;
     private String color;
@@ -11,6 +9,11 @@ public class Vegetable {
         this.weight = weight;
         this.calories = calories;
         this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return getName();
     }
 
     String getName() {

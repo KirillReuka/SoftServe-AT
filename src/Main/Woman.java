@@ -1,7 +1,8 @@
 package Main;
 
 public class Woman extends Human {
-    private String nailsColor;
+
+    private final String nailsColor;
 
     public Woman(String name, String surname, int height, int weight, String nailsColor) {
         super(name, surname, height, weight);
@@ -12,15 +13,8 @@ public class Woman extends Human {
         return nailsColor;
     }
 
-    public void setNailsColor(String nailsColor) {
-        this.nailsColor = nailsColor;
-    }
-
-    public void displayWomanInfo() {
-        System.out.println("Name - " + getName());
-        System.out.println("Surname - " + getSurname());
-        System.out.println("Height - " + getHeight());
-        System.out.println("Weight - " + getWeight());
+    public void display() {
+        super.display();
         System.out.println("Nails color - " + getNailsColor());
     }
 }

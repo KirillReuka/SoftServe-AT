@@ -1,11 +1,11 @@
 package Main;
 
-public class Human {
+abstract public class Human {
 
-    private String name;
-    private String surname;
-    private double height;
-    private double weight;
+    private final String name;
+    private final String surname;
+    private final double height;
+    private final double weight;
 
     public Human(String name, String surname, double height, double weight) {
         this.name = name;
@@ -18,33 +18,23 @@ public class Human {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getSurname() {
         return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.name = surname;
     }
 
     public double getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
     public double getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
-        this.weight = weight;
+    public void display() {
+        System.out.println("Name - " + getName());
+        System.out.println("Surname - " + getSurname());
+        System.out.println("Height - " + getHeight());
+        System.out.println("Weight - " + getWeight());
     }
-
 }
 

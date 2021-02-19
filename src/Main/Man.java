@@ -1,5 +1,3 @@
-package Main;
-
 public class Man extends Human {
 
     private final String beardColor;
@@ -13,8 +11,12 @@ public class Man extends Human {
         return beardColor;
     }
 
-    public void display() {
-        super.display();
-        System.out.println("Beard color - " + getBeardColor());
+    @Override
+    public String toString() {
+        return "Name - " + getName() + "\n" +
+                "Surname - " + getSurname() + "\n" +
+                "Height - " + getHeight() + "\n" +
+                "Weight - " + getWeight() + "\n" +
+                "Beard color - " + getBeardColor();
     }
 }

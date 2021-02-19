@@ -1,5 +1,3 @@
-package Main;
-
 abstract public class Human {
 
     private final String name;
@@ -30,11 +28,12 @@ abstract public class Human {
         return weight;
     }
 
-    public void display() {
-        System.out.println("Name - " + getName());
-        System.out.println("Surname - " + getSurname());
-        System.out.println("Height - " + getHeight());
-        System.out.println("Weight - " + getWeight());
+    public static Human makeChild(String name, String surname, int height, int weight, String nailsColor, String beardColor) {
+        if ((Math.random() + 1) == 1) {
+            return new Man(name, surname, height, weight, beardColor);
+        } else {
+            return new Woman(name, surname, height, weight, nailsColor);
+        }
     }
 }
 

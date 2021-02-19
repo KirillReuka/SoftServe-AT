@@ -1,3 +1,4 @@
+import java.util.Objects;
 public class Vegetable {
     private final String name;
     private final String color;
@@ -14,6 +15,14 @@ public class Vegetable {
     @Override
     public String toString() {
         return getName() + ", " + getWeight() + " g, " + getCalories() + " calories.";
+    }
+
+    public boolean equals(Vegetable v) {
+        if((this.getWeight() == v.getWeight()) && this.getName() == v.getName() && this.getColor() == v.getColor())  {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     String getName() {

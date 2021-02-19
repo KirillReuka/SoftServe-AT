@@ -56,8 +56,10 @@ public class Demo {
         chief.showSalad();
         System.out.println();
 
+        chief.deleteAllVegetables();
+        chief.add("Beet", "Pink", 300, 78);
+        chief.add("Beet", "Pink", 300, 78);
         System.out.println("Compare vegetables");
-        chief.compareTwoVegetables(chief.getSalad().get(0), chief.getSalad().get(1));
-
+        chief.compareTwoVegetables(chief.salad.get(0), chief.salad.get(1));
     }
 }

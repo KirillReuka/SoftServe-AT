@@ -12,7 +12,7 @@ public class Woman extends Human {
         return nailsColor;
     }
 
-    public String getWomanDay() { return womanDay; }
+    public static String getWomanDay() { return womanDay; }
 
     @Override
     public String toString() {

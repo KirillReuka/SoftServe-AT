@@ -2,12 +2,12 @@ public class Demo {
     public static void main(String[] args) {
         Chief chief = new Chief();
 
-        chief.add("Tomato", "Red", 100, 24);
-        chief.add("Cucumber", "Green", 200, 15);
-        chief.add("Onion", "White", 100, 47);
-        chief.add("Potato", "Yellow", 400, 479);
-        chief.add("Carrot", "Orange", 50, 23);
-        chief.add("Beet", "Pink", 300, 78);
+        chief.addVegetableToSalad("Tomato", "Red", 100, 24);
+        chief.addVegetableToSalad("Cucumber", "Green", 200, 15);
+        chief.addVegetableToSalad("Onion", "White", 100, 47);
+        chief.addVegetableToSalad("Potato", "Yellow", 400, 479);
+        chief.addVegetableToSalad("Carrot", "Orange", 50, 23);
+        chief.addVegetableToSalad("Beet", "Pink", 300, 78);
 
         System.out.println("Vegetables added");
         chief.showSalad();
@@ -26,12 +26,12 @@ public class Demo {
         System.out.println();
 
         System.out.println("Vegetables added");
-        chief.add("Tomato", "Red", 150, 24);
-        chief.add("Cucumber", "Green", 220, 15);
-        chief.add("Onion", "White", 100, 47);
-        chief.add("Potato", "Yellow", 400, 479);
-        chief.add("Carrot", "Orange", 50, 23);
-        chief.add("Beet", "Pink", 300, 78);
+        chief.addVegetableToSalad("Tomato", "Red", 150, 24);
+        chief.addVegetableToSalad("Cucumber", "Green", 220, 15);
+        chief.addVegetableToSalad("Onion", "White", 100, 47);
+        chief.addVegetableToSalad("Potato", "Yellow", 400, 479);
+        chief.addVegetableToSalad("Carrot", "Orange", 50, 23);
+        chief.addVegetableToSalad("Beet", "Pink", 300, 78);
         chief.showSalad();
 
         System.out.println("Delete Potato by color yellow");
@@ -57,8 +57,8 @@ public class Demo {
         System.out.println();
 
         chief.deleteAllVegetables();
-        chief.add("Beet", "Pink", 300, 78);
-        chief.add("Beet", "Pink", 300, 78);
+        chief.addVegetableToSalad("Beet", "Pink", 300, 78);
+        chief.addVegetableToSalad("Beet", "Pink", 300, 78);
         System.out.println("Compare vegetables");
         chief.compareTwoVegetables(chief.salad.get(0), chief.salad.get(1));
     }

@@ -4,7 +4,7 @@ import java.util.Comparator;
 public class Chief {
     ArrayList<Vegetable> salad = new ArrayList<>();
 
-    public void add(String name, String color, int weight, int calories) {
+    public void addVegetableToSalad(String name, String color, int weight, int calories) {
         Vegetable vegetable = new Vegetable(name, color, weight, calories);
         salad.add(vegetable);
     }
@@ -21,7 +21,7 @@ public class Chief {
     }
 
     public int getCalories() {
-        return CaloriesCalculating.sumOfCalories(salad);
+        return CaloriesCalculator.sumOfCalories(salad);
     }
 
     public void deleteByName(String vegetable) {

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class CaloriesCalculating {
+public class CaloriesCalculator {
 
     public static int sumOfCalories(ArrayList<Vegetable> vegetableArrayList) {
         int sum = 0;
